@@ -1,0 +1,95 @@
+
+// const UserModel =require("../Model/UserModel");
+
+const UserModel = require("../Model/UserMode")
+
+// const creatError = require("../utils/errorHandle");
+
+//!Update
+
+
+
+const UserEdit=async(req,res,next)=>{
+    // console.log("pramod_update",req.body)
+
+
+
+    try{
+        const usertoUpdate=await  UserModel.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true})
+        res.status(200).json(usertoUpdate)//will tell status and show what User is saved
+
+}
+catch(err){
+    // console.log(err);
+    // res.status(500).json (err)
+    next(err);
+}
+} 
+//!delete
+
+
+const UserDelete=async(req,res,next)=>{
+    // console.log("pramod_delete",req.body)
+
+
+
+    try{
+        const usertoDelete=await  UserModel.findByIdAndDelete(req.params.id)
+        res.status(200).json("User deleted successfully !!!!")//will tell status and show what User is saved
+
+}
+catch(err){
+    // console.log(err);
+    // res.status(500).json (err)
+    next(err);
+}
+}
+
+//!get aLL
+
+const getAllUser=async(req,res,next)=>{
+    // console.log("pramod_getAll",req.body)
+
+
+
+    try{
+        const GetAllUser=await  UserModel.find({})
+        res.status(200).json(GetAllUser)//will tell status and show what User is saved
+
+}
+catch(err){
+    // console.log(err);
+    // res.status(500).json (err)
+    next(err);
+
+}
+}
+ 
+
+
+//!get single User
+
+const getSingleUser=async(req,res,next)=>{
+  
+    // const failed=true;
+    // if(failed)return next(creatError(401,"you are not authorized"))
+
+
+    try{ 
+        // console.log("try start");
+        const singleUser=await  UserModel.findById(req.params.id)
+    //   console.log("singleUser",singleUser);
+        res.status(200).json(singleUser)//will tell status and show what User is saved
+
+        // console.log("try end");
+} 
+catch(err){
+    //    console.log("pramod_error",err);
+    // res.status(500).json (err)
+    next(err);
+
+
+}
+}
+
+module.exports={UserEdit,UserDelete,getAllUser,getSingleUser}
