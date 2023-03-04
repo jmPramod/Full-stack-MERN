@@ -1,5 +1,5 @@
 const express=require("express");
-const {hotelCreate,hotelEdit,hotelDelete,getAllHotel,getSingleHotel} = require("../controller/homeController");
+const {countbyType,hotelCreate,countByCity,hotelEdit,hotelDelete,getAllHotel,getSingleHotel} = require("../controller/homeController");
 const app=express();
 const hotelRouter=express.Router()
 const HotelModel =require("../Model/HotelModel");
@@ -39,5 +39,10 @@ hotelRouter.get("/get-all-hotel",getAllHotel)
 
 hotelRouter.get("/get-single-hotel/:id",getSingleHotel) 
 
+//!test
+
+hotelRouter.get("/countByCity",countByCity)
+
+hotelRouter.get("/countByType",countbyType)
 
 module.exports = hotelRouter
