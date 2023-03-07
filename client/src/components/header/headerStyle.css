@@ -1,0 +1,128 @@
+.header{
+    /* border: 1px solid orange; */
+background-color: #01959a;
+height: 250px;
+}
+.header.list{
+    height: 80px;
+}
+.headContainer{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
+    /* border: 1px solid red; */
+}
+
+
+.headerList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: 15px;
+}
+.headerListItem{
+    box-shadow: 0 5px 15px rgba(44, 44, 44, 0.5);
+    padding: 12px;
+margin: 8px ;
+border-radius: 10px;
+transition: 0.3s ease-in-out;
+color: black;
+background-color: white;
+/* border: 1px solid red; */
+}
+.headerListItem:hover
+{
+    box-shadow: 0 5px 15px rgb(255, 255, 255);
+cursor: pointer;
+    color: white;
+    background-color: black;
+
+}
+
+.bottamHeader{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    color: white;
+}
+.bottamHeaderButton{
+    padding: 10px;
+    font-style: italic;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(44, 44, 44, 0.5);
+
+    border:none;
+    background-color: #c0bebe;
+    transition: 0.3s ease-in-out;
+}
+
+.bottamHeaderButton:hover{
+background-color: white;
+
+box-shadow: 0 5px 15px rgb(255, 255, 255);
+
+}
+.headerSearch{
+    position: relative;
+}
+
+.headerSerarchItem{
+    background-color: whitesmoke;
+    display: flex;
+    /* flex-wrap: wrap; */
+    color: black;
+    
+ position: absolute;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    top: 10px;
+    
+}
+.familyicon{
+margin-right: 10px;
+}
+
+.date{
+    position: absolute;
+left: 20%;
+top: 110%;
+box-shadow: 0 5px 15px rgba(44, 44, 44, 0.5);
+
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* border: 1px solid red; */
+    background-color: white;
+    top: 60px;
+    width: 20%;
+    border-radius: 10px;
+    height: 130px;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(44, 44, 44, 0.5);
+    margin-top: 3px;
+
+}
+.optionItem{
+    margin-top: 5px;
+gap: 5px;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-right:50px ;
+}
+.optionCounterButton,.optionCounterButton{
+    font-size: 18px;
+}
+
+.optionCounterButton:disabled{
+    cursor: not-allowed;
+}

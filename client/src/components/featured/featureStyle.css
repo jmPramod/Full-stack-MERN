@@ -1,0 +1,36 @@
+.featured{
+    max-width: 1024px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    z-index: -100;
+}
+.featuredItem{
+position: relative;;
+}
+
+.featuredItem>img{
+    width:300px;
+    object-fit: cover;
+    height: 250px;
+    border-radius: 20px;
+}
+.featuredItem>img:hover{
+   scale: 1.04 ;
+   transition: 0.4s ease-in;
+}
+
+
+.featuredTitles{
+    position: absolute;
+    top: 50%;
+    margin-left: 25%;
+    color: white;
+    /* padding: 2px; */
+    /* left: 50%; */
+    text-transform: capitalize;
+}
+
