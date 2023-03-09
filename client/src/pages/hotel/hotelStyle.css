@@ -1,0 +1,124 @@
+
+.hotelContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.hotelWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.hotelImages{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    object-fit: cover;
+    gap: 5px;
+}
+.hotelTitle{
+    font-size: 24px;
+}
+.hotelAddress{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px ;
+}
+.hotelDistance{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #0071c2;
+    font-weight: 500;
+}
+.hotelPriceHighLight{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #008009;
+font-weight: 500;
+
+}
+
+.hotelImgWrapper{
+    /* width: 20%; */
+    gap: 5px;
+    display: flex;
+    width: 200px;
+    height: 200px;
+
+}
+
+
+.hotelImgWrapper>img{
+    /* margin: 5px;  */
+    width: 100% ;
+    height: 100%;
+    object-fit: cover;
+}
+.bookNow{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+
+}
+
+.hotelDetails{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+    justify-content: space-between;
+}
+.hotelDetailsText{
+ flex: 3;   
+}
+.hotelDetailsPrices{
+flex: 1;
+background-color: #ebf3ff;
+padding: 20px;
+display: flex;
+gap: 20px;
+flex-direction: column;
+}
+.hotelDetailsPrices>h1{
+color: #555;
+    font-size: 18px;
+}
+.hotelDetailsPrices>span{
+    
+        font-size: 14px;
+    }
+    .hotelDetailsPrices>h2{
+      font-weight: 300;
+            font-size: 18px;
+        }
+        .hotelDetailsPrices>button{
+           border: none;
+           padding: 10px 20px;
+           background-color: #0071c2;
+           color: white;
+           font-weight: bold;
+           cursor: pointer;
+           border-radius: 5px;
+            }
+.hotelDesc{
+    font-size: 14px;
+    margin-top: 20px;
+}

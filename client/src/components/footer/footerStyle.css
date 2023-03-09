@@ -1,0 +1,18 @@
+.footer{
+    width: 100%;
+    font-size: 12px;
+}
+.fLists{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+
+
+}
+
+
+.fListItem{
+    list-style: none;
+}

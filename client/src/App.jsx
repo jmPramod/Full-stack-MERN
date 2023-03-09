@@ -4,7 +4,7 @@ import {BrowserRouter,Route,Routes} from "react-router-dom"
 
 import List from './list/List';
 import SingleHotelPage from './pages/hotel/SingleHotelPage';
-import NavBar from './components/NavBar';
+
 import Home from './pages/home/Home';
 import Header from './components/header/Header';
 
