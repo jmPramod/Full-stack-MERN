@@ -4,6 +4,7 @@ const authrouter = require("./routes/auth");
 const hotelRouter = require("./routes/hotel");
 const roomRouter = require("./routes/room");
 const userRouter = require("./routes/users");
+const cors=require("cors")
 const app = express();
 require("dotenv").config();
 const cookieParser = require('cookie-parser')
@@ -32,6 +33,14 @@ connectDB();
 //     res.send("Welcome to Atlas")
 // })
 
+
+
+
+const corsOprion={
+  origin:"*",
+  credential:true,
+  optionSuccessStatus:200
+}
 /* -------------------------------------------------------------------------- */
 /*                               //? Middleware                               */
 /* -------------------------------------------------------------------------- */
@@ -48,6 +57,7 @@ connectDB();
 app.use(express.urlencoded( {extended:true} ))
 app.use(cookieParser())
 app.use(express.json())
+app.use(cors(corsOprion))
 app.use("/auth", authrouter);
 app.use("/hotel", hotelRouter);
 app.use("/room", roomRouter);

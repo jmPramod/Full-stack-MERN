@@ -20,9 +20,11 @@ cursor: pointer;
 }
 .pListTitles>h1{
     font-size: 18px;
+    text-transform: capitalize;
 }
 
 .pListTitles>h2{
     font-size: 12px;
     font-weight: 300;
+    text-transform: capitalize;
 }

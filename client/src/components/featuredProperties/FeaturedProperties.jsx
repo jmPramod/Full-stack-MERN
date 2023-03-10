@@ -1,9 +1,21 @@
 import React from "react";
+import UseFetch from "../../hook/UseFetch";
 import "./featuredPropertiesStyle.css";
+import "./loading.css"
 const FeaturedProperties = () => {
+
+  const  {data,error,loading}=UseFetch(`http://localhost:5300/hotel/countByCity?cities=chikamagalur,mandya`)
+ 
   return (
     <div className="fp">
-      <div className="fItem">
+       {loading?(
+        <div className="loader">
+        <span className="dot"></span> 
+        <span className="dot"></span>
+        <span className="dot"></span>
+      </div>
+       ):<>     
+        <div className="fItem">
       <img className="fpImg"
         src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt=""
@@ -55,6 +67,8 @@ const FeaturedProperties = () => {
       <span>excellent</span>
       </div>
       </div>
+      </>
+}
     </div>
   );
 };

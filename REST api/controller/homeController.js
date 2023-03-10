@@ -52,12 +52,28 @@ const hotelDelete = async (req, res, next) => {
 };
 
 //!get aLL
-
+/*
 const getAllHotel = async (req, res, next) => {
   // console.log("pramod_getAll",req.body)
 
   try {
     const GetAllHotel = await HotelModel.find({});
+    res.status(200).json(GetAllHotel); //will tell status and show what hotel is saved
+  } catch (err) {
+    // console.log(err);
+    // res.status(500).json (err)
+    next(err);
+  }
+};*/
+
+
+//!get for Property list 
+
+const getAllHotel  = async (req, res, next) => {
+  // console.log("pramod_getAll",req.body)
+
+  try {
+    const GetAllHotel = await HotelModel.find(req.query).limit(req.query.limit);
     res.status(200).json(GetAllHotel); //will tell status and show what hotel is saved
   } catch (err) {
     // console.log(err);
